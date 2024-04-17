@@ -37,7 +37,7 @@ add_executable(
   ${SNAPHU_SRC_SUBDIR}/snaphu_tile.c
   ${SNAPHU_SRC_SUBDIR}/snaphu_util.c
 )
-
+set(C_MATH_LIBRARY m)
 # Link against the C math library libm.
 find_library(C_MATH_LIBRARY m REQUIRED)
 target_link_libraries(snaphu PRIVATE ${C_MATH_LIBRARY})
