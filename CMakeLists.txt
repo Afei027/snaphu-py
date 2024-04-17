@@ -39,7 +39,7 @@ add_executable(
 )
 
 # Link against the C math library libm.
-find_library(C_MATH_LIBRARY NAMES m libm m-lib REQUIRED)
+find_library(C_MATH_LIBRARY libm REQUIRED)
 target_link_libraries(snaphu PRIVATE ${C_MATH_LIBRARY})
 
 # Install the executable at the specified location. Scikit-build-core takes care of
